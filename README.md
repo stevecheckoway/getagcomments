@@ -45,8 +45,10 @@ Instructions
 6. For each assignment, create a simple [YAML](http://yaml.org/) file with the
    following fields.
 
-       token:        40-char personal access token
-       organization: example_org
-       assignment:   project-1
-       branch:       submission
+   ```
+   token:        40-char personal access token
+   organization: example_org
+   assignment:   project-1
+   branch:       submission
+   ```
 7. Run `getagcomments.rb`, passing the path to the assignment YAML file.
