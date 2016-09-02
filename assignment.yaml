@@ -1,0 +1,4 @@
+token:        40-char personal access token
+organization: example_org
+assignment:   project-1
+branch:       submission

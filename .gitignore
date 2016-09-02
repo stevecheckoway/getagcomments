@@ -1,0 +1,4 @@
+/.bundle
+/vendor
+/project*.yaml
+/test.yaml
