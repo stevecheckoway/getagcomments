@@ -83,9 +83,13 @@ def main
 
     # Get the most recent comment made by the bot.
     comment = nil
+    date = nil
     if commit
       client.commit_comments(full_name, commit).each do |c|
-        comment = c.body if c.user.login == client.login
+        if c.user.login == client.login
+          comment = c.body
+          date = c.created_at.getlocal
+        end
       end
     end
 
@@ -97,6 +101,7 @@ def main
     end
     puts "  commit: #{commit || 'null'}"
     if comment
+      puts "  date: \"#{date}\""
       puts "  comment: |"
       puts(comment.lines.map {|line| '    ' + line}.join(''))
     else
